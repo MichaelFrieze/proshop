@@ -8,6 +8,12 @@ import {
 } from '../constants/productConstants'
 
 export const productListReducer = (state = { products: [] }, action) => {
+  console.log('state from productListReducer: ', state)
+  console.log('action from productListReducer: ', action)
+  console.log(' ')
+  console.log('======================')
+  console.log(' ')
+
   switch (action.type) {
     case PRODUCT_LIST_REQUEST:
       return { loading: true, products: [] }
@@ -24,6 +30,12 @@ export const productDetailsReducer = (
   state = { product: { reviews: [] } },
   action
 ) => {
+  console.log('state from productDetailsReducer: ', state)
+  console.log('action from productDetailsReducer: ', action)
+  console.log(' ')
+  console.log('======================')
+  console.log(' ')
+
   switch (action.type) {
     case PRODUCT_DETAILS_REQUEST:
       return { loading: true, ...state }
