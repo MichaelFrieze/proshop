@@ -38,7 +38,6 @@ const ProfileScreen = ({ location, history }) => {
       } else {
         setName(user.name)
         setEmail(user.email)
-        dispatch(listMyOrders())
       }
     }
   }, [dispatch, history, userInfo, user])
@@ -82,7 +81,7 @@ const ProfileScreen = ({ location, history }) => {
           </Form.Group>
 
           <Form.Group controlId='password'>
-            <Form.Label>Password Address</Form.Label>
+            <Form.Label>Password</Form.Label>
             <Form.Control
               type='password'
               placeholder='Enter password'
